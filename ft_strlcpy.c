@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:55:38 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/02/25 19:55:54 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/03/06 17:58:44 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
 
+	if (!dst || !src)
+		return (0);
 	if (dstsize != 0)
 	{
 		i = 0;

@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:41:18 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/02/25 19:41:35 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/03/06 18:00:04 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*elem;
 
-	if (!lst || !f || !del)
+	if (!lst)
 		return (0);
 	new_lst = 0;
 	while (lst)

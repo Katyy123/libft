@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:58:49 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/02/25 19:59:10 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:14:51 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	end = ft_check_end(s1, set);
 	if ((end - beg) <= 0)
 		beg = end + 1;
-	str = malloc(sizeof(char const) * (end - beg + 2));
-	if (!(malloc(sizeof(char const) * (end - beg + 2))))
+	if (!(str = malloc(sizeof(char const) * (end - beg + 2))))
 		return (0);
 	i = 0;
 	while (beg <= end)

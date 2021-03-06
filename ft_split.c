@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:52:06 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/02/27 19:19:06 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/03/04 16:59:24 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ static char		**ft_allocopy_word(char **arr, char const *s, int j, int len)
 	int k;
 	int l;
 
-	arr[0] = malloc(sizeof(char) * (len + 1));
 	if (!(arr[0] = malloc(sizeof(char) * (len + 1))))
 		return (0);
 	k = j - len;
@@ -91,7 +90,6 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	w = ft_word_count(s, c);
-	arr = malloc(sizeof(char *) * (w + 1));
 	if (!(arr = malloc(sizeof(char *) * (w + 1))))
 		return (0);
 	ft_body_ft(arr, s, c, w);

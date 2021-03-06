@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:37:05 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/02/25 19:37:32 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/03/06 18:07:35 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,22 @@ static char		*ft_alloc(int digits)
 {
 	char	*str;
 
-	str = malloc(sizeof(char) * (digits + 1));
-	if (!(malloc(sizeof(char) * (digits + 1))))
+	if (!digits)
+		return (0);
+	if (!(str = malloc(sizeof(char) * (digits + 1))))
 		return (0);
 	return (str);
 }
 
 static char		*ft_putchars_in_str(char *str, int n, int digits, int sign)
 {
+	int	tmp;
+
+	tmp = digits;
 	if (n == 0)
 		str[0] = 48;
 	if (sign == -1)
 		str[0] = '-';
-	str[digits] = '\0';
 	while (n != 0)
 	{
 		if (n == -2147483648)
@@ -54,6 +57,7 @@ static char		*ft_putchars_in_str(char *str, int n, int digits, int sign)
 		n = n / 10;
 		digits--;
 	}
+	str[tmp] = '\0';
 	return (str);
 }
 
@@ -70,7 +74,8 @@ char			*ft_itoa(int n)
 		digits++;
 		sign = -1;
 	}
-	str = ft_alloc(digits);
+	if (!(str = ft_alloc(digits)))
+		return (NULL);
 	str = ft_putchars_in_str(str, n, digits, sign);
 	return (str);
 }

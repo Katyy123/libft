@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:57:02 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/02/26 16:48:35 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/03/05 19:11:22 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (!s1 || !s2)
-		return (0);
 	if (n == 0)
 		return (0);
 	if (s1[0] == '\0' || s2[0] == '\0')

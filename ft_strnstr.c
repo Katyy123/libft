@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:57:28 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/02/25 19:57:43 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/03/05 19:12:24 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char	*pagliaio;
 
 	pagliaio = (char *)haystack;
-	if (!needle)
-		return (0);
 	if (needle[0] == '\0')
 		return (pagliaio);
 	i = 0;
